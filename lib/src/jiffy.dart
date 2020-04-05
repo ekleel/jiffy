@@ -310,7 +310,9 @@ class Jiffy {
     final suffix = _getOrdinalDates(_dateTime.day);
     final escaped = replaceEscapePattern(pattern);
     final _pattern = replaceOrdinalDatePattern(escaped, suffix);
-    return DateFormat(_pattern).format(_dateTime);
+    DateFormat dateFormat = DateFormat(_pattern);
+    dateFormat.useNativeDigits = false;
+    return dateFormat.format(_dateTime);
   }
 
   String _getOrdinalDates(int day) {
