@@ -46,7 +46,7 @@ Map<String, LookUpMessages> _lookupMessagesMap = {
   'ko': KoLocale(),
   'ru': RuLocale(),
   'hi': HiLocale(),
-  'ar': ArLyLocale(true),
+  'ar': ArLyLocale(false),
   'arly': ArLyLocale(false),
   'ardz': ArSaMaDzKwTnLocale(false),
   'arkw': ArSaMaDzKwTnLocale(false),
@@ -61,8 +61,7 @@ Map<String, LookUpMessages> _lookupMessagesMap = {
 };
 
 String format(String locale, DateTime date1, [DateTime date2]) {
-  final messages =
-      _lookupMessagesMap[replaceLocaleHyphen(locale)] ?? EnLocale();
+  final messages = _lookupMessagesMap[replaceLocaleHyphen(locale)] ?? ArLyLocale(false);
   final _date2 = date2 ?? DateTime.now();
   final _allowFromNow = _date2.isBefore(date1);
   var elapsed = _date2.millisecondsSinceEpoch - date1.millisecondsSinceEpoch;
@@ -110,7 +109,5 @@ String format(String locale, DateTime date1, [DateTime date2]) {
     result = messages.years(years.round());
   }
 
-  return [prefix, result, suffix]
-      .where((str) => str != null && str.isNotEmpty)
-      .join(messages.wordSeparator());
+  return [prefix, result, suffix].where((str) => str != null && str.isNotEmpty).join(messages.wordSeparator());
 }

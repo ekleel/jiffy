@@ -8,7 +8,7 @@ class ArLyLocale extends LookUpMessages {
   }
 
   @override
-  String prefixAgo() => 'منذ';
+  String prefixAgo() => 'قبل';
   @override
   String prefixFromNow() => 'بعد';
   @override
@@ -16,14 +16,14 @@ class ArLyLocale extends LookUpMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'ثانية واحدة';
+  String lessThanOneMinute(int seconds) => 'ثانية';
   @override
-  String aboutAMinute(int minutes) => 'دقيقة واحدة';
+  String aboutAMinute(int minutes) => 'دقيقة';
   @override
   String minutes(int minutes) {
     String result;
     if (minutes == 1) {
-      result = 'دقيقة واحدة';
+      result = 'دقيقة';
     } else if (minutes == 2) {
       result = 'دقيقتين';
     } else if (minutes > 2 && minutes < 11) {
@@ -37,12 +37,12 @@ class ArLyLocale extends LookUpMessages {
   }
 
   @override
-  String aboutAnHour(int minutes) => 'ساعة واحدة';
+  String aboutAnHour(int minutes) => 'ساعة';
   @override
   String hours(int hours) {
     String result;
     if (hours == 1) {
-      result = 'ساعة واحدة';
+      result = 'ساعة';
     } else if (hours == 2) {
       result = ' ساعتين';
     } else if (hours > 2 && hours < 11) {
@@ -123,7 +123,7 @@ class ArSaMaDzKwTnLocale extends LookUpMessages {
   }
 
   @override
-  String prefixAgo() => 'منذ';
+  String prefixAgo() => 'قبل';
   @override
   String prefixFromNow() => 'في';
   @override
@@ -136,18 +136,14 @@ class ArSaMaDzKwTnLocale extends LookUpMessages {
   String aboutAMinute(int minutes) => 'دقيقة';
   @override
   String minutes(int minutes) {
-    return replaceNum
-        ? replaceToLocaleNum('$minutes دقائق ', 'ar')
-        : '$minutes دقائق ';
+    return replaceNum ? replaceToLocaleNum('$minutes دقائق ', 'ar') : '$minutes دقائق ';
   }
 
   @override
   String aboutAnHour(int minutes) => 'ساعة';
   @override
   String hours(int hours) {
-    return replaceNum
-        ? replaceToLocaleNum('$hours ساعات ', 'ar')
-        : '$hours ساعات ';
+    return replaceNum ? replaceToLocaleNum('$hours ساعات ', 'ar') : '$hours ساعات ';
   }
 
   @override
@@ -161,18 +157,14 @@ class ArSaMaDzKwTnLocale extends LookUpMessages {
   String aboutAMonth(int days) => 'شهر';
   @override
   String months(int months) {
-    return replaceNum
-        ? replaceToLocaleNum('$months أشهر ', 'ar')
-        : '$months أشهر ';
+    return replaceNum ? replaceToLocaleNum('$months أشهر ', 'ar') : '$months أشهر ';
   }
 
   @override
   String aboutAYear(int year) => 'سنة';
   @override
   String years(int years) {
-    return replaceNum
-        ? replaceToLocaleNum('$years سنوات ', 'ar')
-        : '$years سنوات ';
+    return replaceNum ? replaceToLocaleNum('$years سنوات ', 'ar') : '$years سنوات ';
   }
 
   @override
