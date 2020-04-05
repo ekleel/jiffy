@@ -3,7 +3,8 @@ import 'package:jiffy/src/utils/regex.dart';
 String replaceToLocaleNum(String input, String locale) {
   var localeNumbers = {
     'en': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-    'ar': ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹'],
+    // 'ar': ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '۸', '۹'],
+    'ar': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
     'hi': ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९']
   };
   for (var i = 0; i < localeNumbers['en'].length; i++) {
@@ -13,10 +14,7 @@ String replaceToLocaleNum(String input, String locale) {
 }
 
 String replaceParseInput(String input) {
-  return input
-      .replaceFirst(' pm', ' PM')
-      .replaceFirst(' am', ' AM')
-      .replaceFirst(matchOrdinalDates(), '');
+  return input.replaceFirst(' pm', ' PM').replaceFirst(' am', ' AM').replaceFirst(matchOrdinalDates(), '');
 }
 
 String replacePatternInput(String input) {
@@ -32,8 +30,7 @@ String replaceOrdinalDatePattern(String input, String suffix) {
   var pattern = input;
   regex.forEach((match) {
     if (match.group(1) == 'do') {
-      pattern = input.replaceRange(
-          match.start, match.end, 'd${suffix.isNotEmpty ? "'$suffix'" : ''}');
+      pattern = input.replaceRange(match.start, match.end, 'd${suffix.isNotEmpty ? "'$suffix'" : ''}');
     }
   });
   return pattern;
