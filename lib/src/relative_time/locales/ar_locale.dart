@@ -56,12 +56,12 @@ class ArLyLocale extends LookUpMessages {
   }
 
   @override
-  String aDay(int hours) => 'يوم واحد';
+  String aDay(int hours) => 'يوم';
   @override
   String days(int days) {
     String result;
     if (days == 1) {
-      result = ' يوم واحد';
+      result = ' يوم';
     } else if (days == 2) {
       result = ' يومين';
     } else if (days > 2 && days < 11) {
@@ -75,12 +75,12 @@ class ArLyLocale extends LookUpMessages {
   }
 
   @override
-  String aboutAMonth(int days) => 'شهر واحد';
+  String aboutAMonth(int days) => 'شهر';
   @override
   String months(int months) {
     String result;
     if (months == 1) {
-      result = 'شهر واحد';
+      result = 'شهر';
     } else if (months == 2) {
       result = 'شهرين';
     } else if (months > 2 && months < 11) {
@@ -94,12 +94,12 @@ class ArLyLocale extends LookUpMessages {
   }
 
   @override
-  String aboutAYear(int year) => 'عام واحد';
+  String aboutAYear(int year) => 'عام';
   @override
   String years(int years) {
     String result;
     if (years == 1) {
-      result = 'عام واحد';
+      result = 'عام';
     } else if (years == 2) {
       result = 'عامين';
     } else if (years > 2 && years < 11) {
