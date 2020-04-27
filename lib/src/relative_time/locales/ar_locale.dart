@@ -65,11 +65,11 @@ class ArLyLocale extends LookUpMessages {
     } else if (days == 2) {
       result = ' يومين';
     } else if (days > 2 && days < 11) {
-      result = '$days ايام ';
+      result = '$days أيام ';
     } else if (days > 10) {
       result = '$days يوم ';
     } else {
-      result = '$days ايام ';
+      result = '$days أيام ';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -84,7 +84,7 @@ class ArLyLocale extends LookUpMessages {
     } else if (months == 2) {
       result = 'شهرين';
     } else if (months > 2 && months < 11) {
-      result = '$months اشهر ';
+      result = '$months أشهر ';
     } else if (months > 10) {
       result = '$months شهر ';
     } else {

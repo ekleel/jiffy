@@ -16,22 +16,20 @@ void main() {
     var jiffy12 = Jiffy()..subtract(years: 1);
     var jiffy13 = Jiffy()..subtract(years: 10);
 
-    test(
-        'test Jiffy().locale() method with parsing ar locale should return correct date time in ar locale',
-        () async {
+    test('test Jiffy().locale() method with parsing ar locale should return correct date time in ar locale', () async {
       await Jiffy.locale('ar');
       expect(jiffy1.fromNow(), 'منذ ثانية واحدة');
       expect(jiffy2.fromNow(), 'بعد ثانية واحدة');
       expect(jiffy3.fromNow(), 'منذ دقيقة واحدة');
-      expect(jiffy5.fromNow(), 'منذ ۱۰ دقائق ');
+      expect(jiffy5.fromNow(), 'منذ 10 دقائق ');
       expect(jiffy6.fromNow(), 'منذ ساعة واحدة');
-      expect(jiffy7.fromNow(), 'منذ ۱۰ ساعات ');
+      expect(jiffy7.fromNow(), 'منذ 10 ساعات ');
       expect(jiffy8.fromNow(), 'منذ يوم واحد');
-      expect(jiffy9.fromNow(), 'منذ ۱۰ ايام ');
+      expect(jiffy9.fromNow(), 'منذ 10 أيام ');
       expect(jiffy10.from(Jiffy([2019, 10, 1])), 'منذ شهر واحد');
-      expect(jiffy11.fromNow(), 'منذ ۱۰ اشهر ');
+      expect(jiffy11.fromNow(), 'منذ 10 أشهر ');
       expect(jiffy12.fromNow(), 'منذ عام واحد');
-      expect(jiffy13.fromNow(), 'منذ ۱۰ أعوام ');
+      expect(jiffy13.fromNow(), 'منذ 10 أعوام ');
     });
     test(
         'test Jiffy.locale() method with parsing ar-dz/kw/ma/tn locale should return correct date time in ar-dz locale',
@@ -50,22 +48,21 @@ void main() {
       expect(jiffy12.fromNow(), 'منذ سنة');
       expect(jiffy13.fromNow(), 'منذ 10 سنوات ');
     });
-    test(
-        'test Jiffy.locale() method with parsing ar-sa locale should return correct date time in ar-sa locale',
+    test('test Jiffy.locale() method with parsing ar-sa locale should return correct date time in ar-sa locale',
         () async {
       await Jiffy.locale('ar-sa');
       expect(jiffy1.fromNow(), 'منذ ثوان');
       expect(jiffy2.fromNow(), 'في ثوان');
       expect(jiffy3.fromNow(), 'منذ دقيقة');
-      expect(jiffy5.fromNow(), 'منذ ۱۰ دقائق ');
+      expect(jiffy5.fromNow(), 'منذ 10 دقائق ');
       expect(jiffy6.fromNow(), 'منذ ساعة');
-      expect(jiffy7.fromNow(), 'منذ ۱۰ ساعات ');
+      expect(jiffy7.fromNow(), 'منذ 10 ساعات ');
       expect(jiffy8.fromNow(), 'منذ يوم');
-      expect(jiffy9.fromNow(), 'منذ ۱۰ أيام ');
+      expect(jiffy9.fromNow(), 'منذ 10 أيام ');
       expect(jiffy10.from(Jiffy([2019, 10, 1])), 'منذ شهر');
-      expect(jiffy11.fromNow(), 'منذ ۱۰ أشهر ');
+      expect(jiffy11.fromNow(), 'منذ 10 أشهر ');
       expect(jiffy12.fromNow(), 'منذ سنة');
-      expect(jiffy13.fromNow(), 'منذ ۱۰ سنوات ');
+      expect(jiffy13.fromNow(), 'منذ 10 سنوات ');
     });
     test(
         'test Jiffy.locale() method with parsing de/de-at/de-ch locale should return correct date time in de/de-at/de-ch locale',
@@ -84,9 +81,7 @@ void main() {
       expect(jiffy12.fromNow(), 'vor einem Jahr');
       expect(jiffy13.fromNow(), 'vor 10 Jahren');
     });
-    test(
-        'test Jiffy.locale() method with parsing en locale should return correct date time in en locale',
-        () async {
+    test('test Jiffy.locale() method with parsing en locale should return correct date time in en locale', () async {
       await Jiffy.locale('en');
       expect(jiffy1.fromNow(), 'a few seconds ago');
       expect(jiffy2.fromNow(), 'in a few seconds');
@@ -101,9 +96,7 @@ void main() {
       expect(jiffy12.fromNow(), 'a year ago');
       expect(jiffy13.fromNow(), '10 years ago');
     });
-    test(
-        'test Jiffy.locale() method with parsing id locale should return correct date time in id locale',
-        () async {
+    test('test Jiffy.locale() method with parsing id locale should return correct date time in id locale', () async {
       await Jiffy.locale('id');
       expect(jiffy1.fromNow(), 'beberapa detik yang lalu');
       expect(jiffy2.fromNow(), 'dalam beberapa detik');
@@ -118,9 +111,7 @@ void main() {
       expect(jiffy12.fromNow(), 'satu tahun yang lalu');
       expect(jiffy13.fromNow(), '10 tahun yang lalu');
     });
-    test(
-        'test Jiffy.locale() method with parsing es locale should return correct date time in es locale',
-        () async {
+    test('test Jiffy.locale() method with parsing es locale should return correct date time in es locale', () async {
       await Jiffy.locale('es');
       expect(jiffy1.fromNow(), 'hace un momento');
       expect(jiffy2.fromNow(), 'en un momento');
@@ -135,9 +126,7 @@ void main() {
       expect(jiffy12.fromNow(), 'hace un año');
       expect(jiffy13.fromNow(), 'hace 10 años');
     });
-    test(
-        'test Jiffy.locale() method with parsing fr locale should return correct date time in fr locale',
-        () async {
+    test('test Jiffy.locale() method with parsing fr locale should return correct date time in fr locale', () async {
       await Jiffy.locale('fr');
       expect(jiffy1.fromNow(), 'il y a quelques secondes');
       expect(jiffy2.fromNow(), 'dans quelques secondes');
@@ -152,9 +141,7 @@ void main() {
       expect(jiffy12.fromNow(), 'il y a un an');
       expect(jiffy13.fromNow(), 'il y a 10 ans');
     });
-    test(
-        'test Jiffy.locale() method with parsing hi locale should return correct date time in hi locale',
-        () async {
+    test('test Jiffy.locale() method with parsing hi locale should return correct date time in hi locale', () async {
       await Jiffy.locale('hi');
       expect(jiffy1.fromNow(), 'कुछ ही क्षण पहले');
       expect(jiffy2.fromNow(), 'कुछ ही क्षण में');
@@ -169,9 +156,7 @@ void main() {
       expect(jiffy12.fromNow(), 'एक वर्ष पहले');
       expect(jiffy13.fromNow(), '१० वर्ष पहले');
     });
-    test(
-        'test Jiffy.locale() method with parsing it locale should return correct date time in it locale',
-        () async {
+    test('test Jiffy.locale() method with parsing it locale should return correct date time in it locale', () async {
       await Jiffy.locale('it');
       expect(jiffy1.fromNow(), 'alcuni secondi fa');
       expect(jiffy2.fromNow(), 'tra alcuni secondi');
@@ -186,9 +171,7 @@ void main() {
       expect(jiffy12.fromNow(), 'un anno fa');
       expect(jiffy13.fromNow(), '10 anni fa');
     });
-    test(
-        'test Jiffy.locale() method with parsing ja locale should return correct date time in ja locale',
-        () async {
+    test('test Jiffy.locale() method with parsing ja locale should return correct date time in ja locale', () async {
       await Jiffy.locale('ja');
       expect(jiffy1.fromNow(), '数秒前');
       expect(jiffy2.fromNow(), '数秒後');
@@ -203,9 +186,7 @@ void main() {
       expect(jiffy12.fromNow(), '1年前');
       expect(jiffy13.fromNow(), '10年前');
     });
-    test(
-        'test Jiffy.locale() method with parsing ko locale should return correct date time in ko locale',
-        () async {
+    test('test Jiffy.locale() method with parsing ko locale should return correct date time in ko locale', () async {
       await Jiffy.locale('ko');
       expect(jiffy1.fromNow(), '몇 초 전');
       expect(jiffy2.fromNow(), '몇 초 후');
@@ -220,9 +201,7 @@ void main() {
       expect(jiffy12.fromNow(), '일 년 전');
       expect(jiffy13.fromNow(), '10년 전');
     });
-    test(
-        'test Jiffy.locale() method with parsing pt locale should return correct date time in pt locale',
-        () async {
+    test('test Jiffy.locale() method with parsing pt locale should return correct date time in pt locale', () async {
       await Jiffy.locale('pt');
       expect(jiffy1.fromNow(), 'há segundos');
       expect(jiffy2.fromNow(), 'em segundos');
@@ -237,9 +216,7 @@ void main() {
       expect(jiffy12.fromNow(), 'há um ano');
       expect(jiffy13.fromNow(), 'há 10 anos');
     });
-    test(
-        'test Jiffy.locale() method with parsing ru locale should return correct date time in ru locale',
-        () async {
+    test('test Jiffy.locale() method with parsing ru locale should return correct date time in ru locale', () async {
       await Jiffy.locale('ru');
       expect(jiffy1.fromNow(), 'несколько секунд назад');
       expect(jiffy2.fromNow(), 'через несколько секунд');
@@ -254,8 +231,7 @@ void main() {
       expect(jiffy12.fromNow(), 'год назад');
       expect(jiffy13.fromNow(), '10 лет назад');
     });
-    test(
-        'test Jiffy.locale() method with parsing zh-cn locale should return correct date time in zh-cn locale',
+    test('test Jiffy.locale() method with parsing zh-cn locale should return correct date time in zh-cn locale',
         () async {
       await Jiffy.locale('zh');
       expect(jiffy1.fromNow(), '几秒前');
@@ -271,8 +247,7 @@ void main() {
       expect(jiffy12.fromNow(), '1 年前');
       expect(jiffy13.fromNow(), '10 年前');
     });
-    test(
-        'test Jiffy.locale() method with parsing zh-hk/tw locale should return correct date time in zh-hk/tw locale',
+    test('test Jiffy.locale() method with parsing zh-hk/tw locale should return correct date time in zh-hk/tw locale',
         () async {
       await Jiffy.locale('zh-hk');
       expect(jiffy1.fromNow(), '幾秒前');
@@ -288,9 +263,7 @@ void main() {
       expect(jiffy12.fromNow(), '1 年前');
       expect(jiffy13.fromNow(), '10 年前');
     });
-    test(
-        'test Jiffy.locale() method with parsing pl locale should return correct date time in pl locale',
-        () async {
+    test('test Jiffy.locale() method with parsing pl locale should return correct date time in pl locale', () async {
       await Jiffy.locale('pl');
       expect(jiffy1.fromNow(), 'kilka sekund temu');
       expect(jiffy2.fromNow(), 'za kilka sekund');
@@ -305,9 +278,7 @@ void main() {
       expect(jiffy12.fromNow(), 'rok temu');
       expect(jiffy13.fromNow(), '10 lat temu');
     });
-    test(
-        'test Jiffy.locale() method with parsing tr locale should return correct date time in tr locale',
-        () async {
+    test('test Jiffy.locale() method with parsing tr locale should return correct date time in tr locale', () async {
       await Jiffy.locale('tr');
       expect(jiffy1.fromNow(), 'birkaç saniye önce');
       expect(jiffy2.fromNow(), 'birkaç saniye içinde');
@@ -322,9 +293,7 @@ void main() {
       expect(jiffy12.fromNow(), 'bir yıl önce');
       expect(jiffy13.fromNow(), '10 yıl önce');
     });
-    test(
-        'test Jiffy.locale() method with parsing sv locale should return correct date time in sv locale',
-        () async {
+    test('test Jiffy.locale() method with parsing sv locale should return correct date time in sv locale', () async {
       await Jiffy.locale('sv');
       expect(jiffy1.fromNow(), 'några sekunder sedan');
       expect(jiffy2.fromNow(), 'om några sekunder');
