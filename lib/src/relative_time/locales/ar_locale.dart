@@ -27,11 +27,11 @@ class ArLyLocale extends LookUpMessages {
     } else if (minutes == 2) {
       result = 'دقيقتين';
     } else if (minutes > 2 && minutes < 11) {
-      result = '$minutes دقائق ';
+      result = '$minutes دقائق';
     } else if (minutes > 10) {
-      result = '$minutes دقيقة ';
+      result = '$minutes دقيقة';
     } else {
-      result = '$minutes دقائق ';
+      result = '$minutes دقائق';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -44,13 +44,13 @@ class ArLyLocale extends LookUpMessages {
     if (hours == 1) {
       result = 'ساعة';
     } else if (hours == 2) {
-      result = ' ساعتين';
+      result = 'ساعتين';
     } else if (hours > 2 && hours < 11) {
-      result = '$hours ساعات ';
+      result = '$hours ساعات';
     } else if (hours > 10) {
-      result = '$hours ساعة ';
+      result = '$hours ساعة';
     } else {
-      result = '$hours ساعات ';
+      result = '$hours ساعات';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -61,15 +61,15 @@ class ArLyLocale extends LookUpMessages {
   String days(int days) {
     String result;
     if (days == 1) {
-      result = ' يوم';
+      result = 'يوم';
     } else if (days == 2) {
-      result = ' يومين';
+      result = 'يومين';
     } else if (days > 2 && days < 11) {
-      result = '$days أيام ';
+      result = '$days أيام';
     } else if (days > 10) {
-      result = '$days يوم ';
+      result = '$days يوم';
     } else {
-      result = '$days أيام ';
+      result = '$days أيام';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -84,11 +84,11 @@ class ArLyLocale extends LookUpMessages {
     } else if (months == 2) {
       result = 'شهرين';
     } else if (months > 2 && months < 11) {
-      result = '$months أشهر ';
+      result = '$months أشهر';
     } else if (months > 10) {
-      result = '$months شهر ';
+      result = '$months شهر';
     } else {
-      result = '$months شهور ';
+      result = '$months شهور';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -103,11 +103,11 @@ class ArLyLocale extends LookUpMessages {
     } else if (years == 2) {
       result = 'عامين';
     } else if (years > 2 && years < 11) {
-      result = '$years أعوام ';
+      result = '$years أعوام';
     } else if (years > 10) {
-      result = '$years عامًا ';
+      result = '$years عامًا';
     } else {
-      result = '$years أعوام ';
+      result = '$years أعوام';
     }
     return replaceNum ? replaceToLocaleNum(result, 'ar') : result;
   }
@@ -136,35 +136,35 @@ class ArSaMaDzKwTnLocale extends LookUpMessages {
   String aboutAMinute(int minutes) => 'دقيقة';
   @override
   String minutes(int minutes) {
-    return replaceNum ? replaceToLocaleNum('$minutes دقائق ', 'ar') : '$minutes دقائق ';
+    return replaceNum ? replaceToLocaleNum('$minutes دقائق ', 'ar') : '$minutes دقائق';
   }
 
   @override
   String aboutAnHour(int minutes) => 'ساعة';
   @override
   String hours(int hours) {
-    return replaceNum ? replaceToLocaleNum('$hours ساعات ', 'ar') : '$hours ساعات ';
+    return replaceNum ? replaceToLocaleNum('$hours ساعات ', 'ar') : '$hours ساعات';
   }
 
   @override
   String aDay(int hours) => 'يوم';
   @override
   String days(int days) {
-    return replaceNum ? replaceToLocaleNum('$days أيام ', 'ar') : '$days أيام ';
+    return replaceNum ? replaceToLocaleNum('$days أيام ', 'ar') : '$days أيام';
   }
 
   @override
   String aboutAMonth(int days) => 'شهر';
   @override
   String months(int months) {
-    return replaceNum ? replaceToLocaleNum('$months أشهر ', 'ar') : '$months أشهر ';
+    return replaceNum ? replaceToLocaleNum('$months أشهر ', 'ar') : '$months أشهر';
   }
 
   @override
   String aboutAYear(int year) => 'سنة';
   @override
   String years(int years) {
-    return replaceNum ? replaceToLocaleNum('$years سنوات ', 'ar') : '$years سنوات ';
+    return replaceNum ? replaceToLocaleNum('$years سنوات ', 'ar') : '$years سنوات';
   }
 
   @override
