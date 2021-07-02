@@ -310,7 +310,7 @@ class Jiffy {
     final suffix = _getOrdinalDates(_dateTime.day);
     final escaped = replaceEscapePattern(pattern);
     final _pattern = replaceOrdinalDatePattern(escaped, suffix);
-    DateFormat dateFormat = DateFormat(_pattern, 'ar_SA');
+    DateFormat dateFormat = DateFormat(_pattern, _defaultLocale);
     dateFormat.useNativeDigits = false;
     return dateFormat.format(_dateTime);
   }
